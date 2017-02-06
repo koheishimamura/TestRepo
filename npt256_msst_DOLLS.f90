@@ -1695,7 +1695,7 @@ if(clock .gt. clocks+timemx-timea .and. mod(clock,10)==1)then
  call cfa
 end if
 if(vmd.eq.1 .and. clock == 0) call vmdfile
-if(vmd.eq.1 .and. clock>clocks+timemx-2000 .and. mod(clock,10)==1) call vmdfile
+if(vmd.eq.1 .and. clock>clocks+timemx-timemx.and. mod(clock,100)==0) call vmdfile
 
       return
       end
