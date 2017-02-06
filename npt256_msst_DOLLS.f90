@@ -1681,6 +1681,9 @@ end if
 if(arg.eq.10)then
 ekinb=ekinb*0.5d0
 hen1=0.d0
+do i=1,npart
+   hen1 = hen1 - teps*x(i)*vx(i)*mar
+end do
 hen=0.d0
 hen=etot+ekinb+hen1+hen
 write(*,6000) clock,ek,epot,etot,hen,ekinb,-tmass*Vs**2*(V0-V)**2/2.d0/V0**2,hen1,box(1,1),pint(1,1),temp,V/V0
